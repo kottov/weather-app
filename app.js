@@ -9,5 +9,7 @@ req({
     url: mapsApiUrl + address,
     json: true
 }, (err, res, body) => {
-    console.log(body);
+    console.log(body.results[0].formatted_address);
+    console.log(body.results[0].geometry.location.lat);
+    console.log(body.results[0].geometry.location.lng);
 });
