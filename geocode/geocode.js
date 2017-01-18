@@ -1,13 +1,16 @@
 /*jshint esversion: 6 */
 
 const req = require('request');
+const qs = require('querystring');
+// require('request-debug')(req);
 
-const mapsApiUrl = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
+const mapsApiUrl = 'https://maps.googleapis.com/maps/api/geocode/json';
 
 const geocodeAddress = (address, cb) => {
     
     req({
-        url: mapsApiUrl + encodeURIComponent(address),
+        url: mapsApiUrl,
+        qs: { address },
         json: true
     }, (err, res, body) => {
         if(err) {

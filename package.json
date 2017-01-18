@@ -11,5 +11,8 @@
   "dependencies": {
     "request": "^2.79.0",
     "yargs": "^6.6.0"
+  },
+  "devDependencies": {
+    "request-debug": "^0.2.0"
   }
 }
